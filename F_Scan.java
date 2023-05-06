@@ -29,7 +29,7 @@ public class F_Scan {
         int totalSeekOperations = 0;
         int currentHeadPosition = headPosition;
 
-        // First pass: Move head towards the end
+        
         int startIndex = 0;
         int endIndex = sortedRequests.indexOf(headPosition);
 
@@ -51,7 +51,7 @@ public class F_Scan {
             currentHeadPosition = currentRequest;
         }
 
-        // Second pass: Move head towards the beginning
+        
         if (startIndex != 0) {
             System.out.println("Moving head to 0");
             totalSeekOperations += Math.abs(0 - currentHeadPosition);
